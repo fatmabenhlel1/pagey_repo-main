@@ -1,0 +1,42 @@
+.footer {
+    display: flex;
+    min-height: 237px;
+    align-items: center;
+    justify-content: center;
+    padding: 69px 60px;
+    font: 400 20px/28px Poppins;
+    color: #000;
+    text-align: center;
+  }
+  
+  
+  .footerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px 60px;
+  }
+  
+  .copyright {
+    color: #000;
+  }
+  
+  .footerNav {
+    display: flex;
+    gap: 60px;
+  }
+  
+  .footerLink {
+    color: #000;
+    text-decoration: none;
+  }
+  
+
+  
+  @media (max-width: 991px) {
+    .footer {
+      padding: 40px 20px;
+    }
+  
+  }

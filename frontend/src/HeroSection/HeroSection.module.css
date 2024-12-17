@@ -1,0 +1,82 @@
+.heroSection {
+    position: relative;
+    display: flex;
+    min-height: 332px;
+    width: 100%;
+    max-width: 1354px;
+    align-items: center;
+    justify-content: center;
+    padding: 39px 30px;
+    margin-top: -8px;
+  }
+  
+  .heroContent {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 28px 80px;
+  }
+  
+  .heroTitle {
+    font: 700 40px/1.2 Poppins, -apple-system, Roboto, Helvetica, sans-serif;
+    color: #000;
+  }
+  
+  .brandName {
+    font: 400 50px Outfit, sans-serif;
+  }
+  
+  .heroDescription {
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top: 32px;
+  }
+  
+  .ctaButton {
+    border-radius: 8px;
+    background-color: #2c3e50;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 24px;
+    margin-top: 32px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .heroBackground {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+  }
+  
+  @media (max-width: 991px) {
+    .heroSection {
+      padding: 0 20px;
+    }
+    
+    .heroContent {
+      padding: 0 20px;
+    }
+    
+    .brandName {
+      font-size: 40px;
+    }
+  }
+
+  .createhref:link, .createhref:visited {
+    color: inherit;
+    text-decoration:none
+    
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
