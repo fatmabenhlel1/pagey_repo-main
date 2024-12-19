@@ -1,4 +1,5 @@
 import User from '../models/userModel.js'; // Import the User model
+import Cart from '../models/cartModel.js'; // Import the Cart model
 import bcrypt from 'bcryptjs'; // For hashing the password
 import jwt from 'jsonwebtoken';
 
@@ -26,8 +27,17 @@ export const registerUser = async (req, res) => {
         // Save the user in the database
         await newUser.save();
 
+
+                // Create a cart for the user
+                const newCart = new Cart({
+                  user: newUser._id, // Link the cart to the newly created user
+                  books: [], // Initialize an empty cart
+              });
+      
+              await newCart.save();
+
         res.status(201).json({
-            message: 'User registered successfully',
+            message: 'User registered successfully and cart created',
             user: { id: newUser._id, name: newUser.name, email: newUser.email },
         });
     } catch (error) {
