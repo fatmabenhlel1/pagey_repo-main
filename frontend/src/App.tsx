@@ -17,6 +17,7 @@ import AudioBookPage from './AudioBook/AudioBookPage';
 import SurveyPage from './Survey/SurveyPage';
 import TradingSystem from './TradingSystem/TradingSystem';
 import BookForm from './LibraryOwner/BookForm';
+import Chatbot from './chatbot/Chatbot';
 
 const HeroSection: React.FC = () => {
   return (
@@ -40,6 +41,7 @@ const HeroSection: React.FC = () => {
         <Route path="/survey" element={<SurveyPage />} />
         <Route path="/trading" element={<TradingSystem />} />
         <Route path="/library-owner" element={<BookForm />} />
+        <Route path="/chat" element={<Chatbot />} />
       </Routes>
     </Router>
   );

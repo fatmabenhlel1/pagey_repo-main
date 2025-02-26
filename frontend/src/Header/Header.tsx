@@ -14,7 +14,8 @@ const Header: React.FC = () => {
     { label: 'Audiobooks', path: '/audiobooks' },
     { label: 'Teens & YA', path: '/teens-ya' },
     { label: 'Toys & Games', path: '/toys-games' },
-    { label: 'Stationery & Gifts', path: '/stationery-gifts' },
+    { label: 'Trading-center', path: '/trading' },
+    { label: 'BookBuddy ', path: '/chat' },
   ];
 
   // Function to handle navigation
