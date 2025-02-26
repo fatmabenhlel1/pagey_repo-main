@@ -1,11 +1,18 @@
 from flask import Flask, request, jsonify
 import os
 from groq import Groq
-from flask_cors import CORS 
+from flask_cors import CORS
+from dotenv import load_dotenv  # Import dotenv to load environment variables
+
+# Load environment variables from .env
+load_dotenv()
+
 app = Flask(__name__)
 
-# GROQ API endpoint and key (replace with actual API details)
-GROQ_API_KEY = "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"
+# Get the API key from the environment variables
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")  # Correct way in Python
+
+# Enable CORS
 CORS(app, resources={r"/chat": {"origins": "http://localhost:5173"}})
 
 # Initialize the Groq client once
@@ -25,8 +32,8 @@ def chat():
         chat_completion = client.chat.completions.create(
             messages=[ 
                  {
-            "role": "system",
-            "content": "You are a helpful assistant that provides information about books and authors."
+                    "role": "system",
+                    "content": "You are a helpful assistant that provides information about books and authors."
                 },
                 {
                     "role": "user",
