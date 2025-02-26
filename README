@@ -1,0 +1,65 @@
+Running the Web Application
+
+Prerequisites
+
+Ensure you have the following installed:
+
+Node.js
+
+npm
+
+Python
+
+Virtual Environment (venv or virtualenv)
+
+Setup Instructions
+
+1. Clone the Repository
+
+git clone <repository-url>
+cd <project-folder>
+
+2. Install Dependencies
+
+Backend
+
+cd backend
+npm install
+
+Frontend
+
+cd ../frontend
+npm install
+
+Python Virtual Environment
+Activate the virtual environment:
+
+Windows: venv\Scripts\activate
+
+macOS/Linux: source venv/bin/activate
+
+Install required Python packages:
+
+pip install -r requirements.txt
+
+3. Run the Application
+
+Start the Backend Server
+
+npm run server
+
+Or manually start without nodemon:
+
+npm run start
+
+Start the Frontend
+
+npm run client
+
+Run the Python API Connection
+
+Ensure your virtual environment is activated, then run:
+
+python app.py
+
+Run Both Frontend & Backend Concurrently
